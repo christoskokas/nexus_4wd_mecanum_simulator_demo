@@ -1,3 +1,6 @@
+# Changes To Be Made
+Add 4 cameras for the VSLAM Demo simulation.
+
 # Nexus 4WD Mecanum Simulator
 ROS Repository for the robot description and gazebo simulation of the 4WD Mecanum wheel robot from Nexus Robot: https://www.nexusrobot.com/product/4wd-mecanum-wheel-mobile-arduino-robotics-car-10011.html
 
