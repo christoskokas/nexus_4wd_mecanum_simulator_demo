@@ -378,4 +378,17 @@
     <xacro:zed_camera base_name="base_link" pos_x="-0.15" pos_y="0.0" pos_z="0.2" rotate_camera="1.0" camera_numb="4"/>
   </xacro:if>
 
+  <gazebo>
+      <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+            <alwaysOn>true</alwaysOn>
+            <updateRate>100.0</updateRate>
+            <bodyName>base_footprint</bodyName>
+            <topicName>ground_truth/pose</topicName>
+            <gaussianNoise>0.0</gaussianNoise>
+            <frameName>world</frameName>
+            <xyzOffsets>0 0 0</xyzOffsets>
+            <rpyOffsets>0 0 0</rpyOffsets>
+      </plugin> 
+  </gazebo>
+
 </robot>

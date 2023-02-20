@@ -81,6 +81,6 @@
 
   <!-- Spawn the robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
-        args="-urdf -model nexus_4wd_mecanum -param robot_description -x 0 -y 0 -z 0.5" />
+        args="-urdf -model nexus_4wd_mecanum -param robot_description -x 0 -y 0 -z 0.05 -R 0 -P 0 -Y 1.57" />
 
 </launch>

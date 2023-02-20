@@ -150,18 +150,18 @@
         </sensor>
     </gazebo>
 
-    <gazebo>
+    <!-- <gazebo>
       <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
             <alwaysOn>true</alwaysOn>
-            <updateRate>50.0</updateRate>
-            <bodyName>left_camera_optical_frame_${numb}</bodyName>
+            <updateRate>100.0</updateRate>
+            <bodyName>base_footprint</bodyName>
             <topicName>ground_truth/left_camera_optical_frame_${numb}</topicName>
-            <gaussianNoise>0.001</gaussianNoise>
+            <gaussianNoise>0.0</gaussianNoise>
             <frameName>world</frameName>
             <xyzOffsets>0 0 0</xyzOffsets>
             <rpyOffsets>0 0 0</rpyOffsets>
       </plugin> 
-  </gazebo>
+  </gazebo> -->
 
-    </xacro:macro>
+</xacro:macro>
 </robot>
