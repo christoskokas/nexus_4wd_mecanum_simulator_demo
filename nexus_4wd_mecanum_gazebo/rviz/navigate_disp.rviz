@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /RobotModel1/Status1
         - /TF1
         - /LaserScan1
         - /Map1
@@ -34,7 +33,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -361,8 +360,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 5.889226913452148
-        Min Value: 2.7529139518737793
+        Max Value: 0.7950950264930725
+        Min Value: 0.34394046664237976
         Value: true
       Axis: X
       Channel Name: intensities
@@ -378,9 +377,9 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 3
+      Size (Pixels): 10
       Size (m): 0.20000000298023224
-      Style: Boxes
+      Style: Points
       Topic: /scan
       Unreliable: false
       Use Fixed Frame: true
@@ -580,7 +579,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 6.4634318351745605
+      Distance: 4.394120693206787
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -596,9 +595,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.1597967147827148
+      Pitch: 1.4097964763641357
       Target Frame: <Fixed Frame>
-      Yaw: 3.1316936016082764
+      Yaw: 3.1066932678222656
     Saved: ~
 Window Geometry:
   Displays:

@@ -6,7 +6,7 @@
     <arg if="$(eval arg('ground_truth'))"  name="transform_period" value="0.0" />
     <arg unless="$(eval arg('ground_truth'))"  name="transform_period" value="0.5" />
 
-    <arg if="$(eval arg('ground_truth'))"  name="odom_frame" value="world" />
+    <arg if="$(eval arg('ground_truth'))"  name="odom_frame" value="odom" />
     <arg unless="$(eval arg('ground_truth'))"  name="odom_frame" value="odom" />
     
     <arg if="$(eval arg('robot_name') == '/')"  name="frame_prefix" value="" />
@@ -30,5 +30,11 @@
         <node if="$(arg rviz)" name="rviz" pkg="rviz" type="rviz"
             args="-d $(find nexus_4wd_mecanum_gazebo)/rviz/navigate_disp.rviz -f $(arg frame_prefix)map"
             output="screen"/>
+
+        <include file="$(find nexus_4wd_mecanum_gazebo)/launch/VSLAM/point_to_laser_node.launch" >
+                <arg name="app_name"             value="vio_slam"/>
+                <arg name="target_frame"            value="camera_center_1"/>
+                <arg name="min_height"              value="-1.0"/>
+        </include>
 
 </launch>
