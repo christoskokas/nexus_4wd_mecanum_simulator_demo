@@ -1,9 +1,10 @@
 global_costmap:
   global_frame: map
-  robot_base_frame: base_footprint
+  robot_base_frame: base_link
   update_frequency: 1.0 
   publish_frequency: 0.5 
-  static_map: true
+  static_map: false
+  rolling_window: true
   cost_scaling_factor: 10.0
 
   plugins:

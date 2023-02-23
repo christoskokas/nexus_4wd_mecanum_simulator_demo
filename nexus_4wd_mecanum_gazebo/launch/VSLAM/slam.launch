@@ -34,7 +34,8 @@
         <include file="$(find nexus_4wd_mecanum_gazebo)/launch/VSLAM/point_to_laser_node.launch" >
                 <arg name="app_name"             value="vio_slam"/>
                 <arg name="target_frame"            value="camera_center_1"/>
-                <arg name="min_height"              value="-1.0"/>
+                <arg name="min_height"              value="-0.15"/>
+                <arg name="max_height"              value="0.01"/>
         </include>
 
 </launch>
