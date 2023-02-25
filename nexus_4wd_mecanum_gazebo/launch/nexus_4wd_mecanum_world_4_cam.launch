@@ -6,7 +6,7 @@
         <arg name="four_cameras" default="true"/>
         <arg name="world_frame"            default="odom"/>
         <arg name="namespace"              default=""/>
-        <arg name="child_frame_id"         default="base_link"/>
+        <arg name="child_frame_id"         default="base_footprint"/>
   <!-- <arg name="world_name" default="$(find nexus_gazebo)/worlds/nexus_4wd_mecanum.world" /> -->
 
   <arg name="gazebo_world"                                default="$(find argos_config)/worlds/vineyard/trialForSimu.world" /> 
@@ -14,12 +14,14 @@
   
   <env name="GAZEBO_MODEL_PATH"     value="$(find argos_config)/worlds"/>
 
+
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
           <arg name="world_name" value="$(arg gazebo_world)"/>
           <arg name="gui" value="true" />
           <arg name="paused" value="false"/>
           <arg name="use_sim_time" value="true"/>
           <arg name="headless" value="false"/>
+          <arg name="extra_gazebo_args" value="odom:=/gazebo/odom" />
   </include>
 
   <node ns="camera_1" pkg="stereo_image_proc" type="stereo_image_proc" name="stereo_image_proc">
@@ -86,12 +88,12 @@
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
         args="-urdf -model nexus_4wd_mecanum -param robot_description -x 0 -y 0 -z 0.05 -R 0 -P 0 -Y 1.57" />
 
-        <node name="odom_to_tf" pkg="message_to_tf" type="message_to_tf" args="odom">
+        <!-- <node name="odom_to_tf" pkg="message_to_tf" type="message_to_tf" args="odom">
             <param name="~frame_id"                 value="$(arg world_frame)" />
             <param name="~stabilized_frame_id"      value="/$(arg namespace)/base_stabilized" />
             <param name="~footprint_frame_id"       value="/$(arg namespace)/base_footprint" />
             <param name="~child_frame_id"           value="$(arg child_frame_id)" />
-        </node>
+        </node> -->
         
         <!-- <node pkg="tf" type="static_transform_publisher" name ="map_to_world" args="0 0 0 0 0 0 map world 100" /> -->
 
