@@ -6,7 +6,7 @@
         <arg name="four_cameras" default="true"/>
         <arg name="world_frame"            default="odom"/>
         <arg name="namespace"              default=""/>
-        <arg name="child_frame_id"         default="base_footprint"/>
+        <arg name="child_frame_id"         default="base_link"/>
   <!-- <arg name="world_name" default="$(find nexus_gazebo)/worlds/nexus_4wd_mecanum.world" /> -->
 
   <arg name="gazebo_world"                                default="$(find argos_config)/worlds/vineyard/trialForSimu.world" /> 

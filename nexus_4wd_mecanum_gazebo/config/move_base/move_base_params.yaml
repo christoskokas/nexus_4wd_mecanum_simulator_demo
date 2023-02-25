@@ -1,5 +1,5 @@
 base_global_planner: global_planner/GlobalPlanner
-base_local_planner: dwa_local_planner::DWALocalPlanner
+base_local_planner: dwa_local_planner/DWAPlannerROS
 # base_local_planner: nav_core_adapter::LocalPlannerAdapter
 # base_global_planner: global_planner/GlobalPlanner
 # base_local_planner: nav_core_adapter::LocalPlannerAdapter
