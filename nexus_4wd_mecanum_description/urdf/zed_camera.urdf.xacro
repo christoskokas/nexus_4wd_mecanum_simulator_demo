@@ -136,7 +136,7 @@
             <alwaysOn>true</alwaysOn>
             <updateRate>0.0</updateRate>
             <cameraName>camera_${numb}</cameraName>
-            <imageTopicName>image_raw</imageTopicName>
+            <imageTopicName>image_rect</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
             <frameName>left_camera_optical_frame_${numb}</frameName>
             <!--<rightFrameName>right_camera_optical_frame</rightFrameName>-->

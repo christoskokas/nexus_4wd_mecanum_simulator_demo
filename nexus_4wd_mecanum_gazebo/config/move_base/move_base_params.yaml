@@ -6,7 +6,8 @@ base_local_planner: dwa_local_planner/DWAPlannerROS
 # LocalPlannerAdapter:
 #   planner_name: dwb_local_planner::DWBLocalPlanner
 
-footprint: [[-0.150, -0.108], [-0.150, 0.108], [0.150, 0.108], [0.150, -0.108]]
+footprint: [[-0.150, -0.15], [-0.150, 0.15], [0.150, 0.15], [0.150, -0.15]]
+# footprint: [[-0.150, -0.108], [-0.150, 0.108], [0.150, 0.108], [0.150, -0.108]]
 shutdown_costmaps: false
 
 controller_frequency: 3.0
