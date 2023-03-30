@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-    <xacro:macro name="zed_camera" params="base_name pos_x pos_y pos_z rotate_camera camera_numb" >
+    <xacro:macro name="zed_camera" params="base_name pos_x pos_y pos_z rotate_camera camera_numb reshh resww" >
 
     <!-- Arguments -->
 
@@ -20,6 +20,8 @@
     <xacro:property name="cam_pos_z"     value="${pos_z}" />
     <xacro:property name="rotate"        value="${rotate_camera}" />
     <xacro:property name="numb"          value="${camera_numb}" />
+    <xacro:property name="resh"          value="${reshh}" />
+    <xacro:property name="resw"          value="${resww}" />
 
     <!-- Materials -->
 
@@ -101,14 +103,14 @@
 
     <gazebo reference="left_camera_frame_${numb}">
         <sensor type="multicamera" name="stereo_camera">
-        <update_rate>10.0</update_rate>
+        <update_rate>15.0</update_rate>
         <camera name="left">
             <horizontal_fov>1.91986218</horizontal_fov>
             <vertical_fov>1.22173048</vertical_fov>
             <diagonal_fov>2.0943951</diagonal_fov>
             <image>
-                <width>752</width>
-                <height>480</height>
+                <width>${resw}</width>
+                <height>${resh}</height>
                 <format>R8G8B8</format>
             </image>
             <clip>
@@ -122,8 +124,8 @@
             <vertical_fov>1.22173048</vertical_fov>
             <diagonal_fov>2.0943951</diagonal_fov>
             <image>
-                <width>752</width>
-                <height>480</height>
+                <width>${resw}</width>
+                <height>${resh}</height>
                 <format>R8G8B8</format>
             </image>
             <clip>

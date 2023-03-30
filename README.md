@@ -1,5 +1,32 @@
-# Changes To Be Made
-Add 4 cameras for the VSLAM Demo simulation.
+# Changes For Simulation Experiments
+
+This package was forked for experiments for the publication: Multicamera Visual SLAM For Vineyard Inspection ( https://github.com/christoskokas/DC-VSLAM.git ), submited at the CASE 2023.
+
+3 cameras were added to the description and 2 new worlds were created. 
+
+# Installation
+
+Clone the package on the catkin workspace and build.
+
+```
+cd ${WORKSPACE_PATH}/src
+git clone https://github.com/christoskokas/nexus_4wd_mecanum_simulator_demo.git
+cd ..
+catkin_make
+source devel/setup.bash
+```
+
+# Quick Start
+
+To launch the world resembling the csl lab :
+```
+roslaunch nexus_4wd_mecanum_gazebo csl_lab_mecanum.launch
+```
+
+To launch the world resembling a real vineyard :
+```
+roslaunch nexus_4wd_mecanum_gazebo vineyard_mecanum.launch
+```
 
 # Nexus 4WD Mecanum Simulator
 ROS Repository for the robot description and gazebo simulation of the 4WD Mecanum wheel robot from Nexus Robot: https://www.nexusrobot.com/product/4wd-mecanum-wheel-mobile-arduino-robotics-car-10011.html

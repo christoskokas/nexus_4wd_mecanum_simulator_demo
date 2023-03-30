@@ -374,11 +374,11 @@
   rear sensor
   <xacro:urm04_sensor frame_name="rear_sensor" ros_topic="rear_sensor" update_rate="10" min_range="0.04" max_range="2.5" horizontal_field_of_view="1.04" vertical_field_of_view="0.04" ray_count="2" /> -->
 
-  <xacro:zed_camera base_name="base_link" pos_x="0.15" pos_y="0.0" pos_z="0.2" rotate_camera="0.0" camera_numb="1"/>
+  <xacro:zed_camera base_name="base_link" pos_x="0.15" pos_y="0.0" pos_z="0.2" rotate_camera="0.0" camera_numb="1" reshh = "480" resww = "752"/>
   <xacro:if value="$(arg four_cameras)">
-    <xacro:zed_camera base_name="base_link" pos_x="0.0" pos_y="-0.15" pos_z="0.2" rotate_camera="-0.5" camera_numb="2"/>
-    <xacro:zed_camera base_name="base_link" pos_x="0.0" pos_y="0.15" pos_z="0.2" rotate_camera="0.5" camera_numb="3"/>
-    <xacro:zed_camera base_name="base_link" pos_x="-0.15" pos_y="0.0" pos_z="0.2" rotate_camera="1.0" camera_numb="4"/>
+    <xacro:zed_camera base_name="base_link" pos_x="0.0" pos_y="-0.15" pos_z="0.2" rotate_camera="-0.5" camera_numb="2" reshh = "1080" resww = "1920"/>
+    <!-- <xacro:zed_camera base_name="base_link" pos_x="0.0" pos_y="0.15" pos_z="0.2" rotate_camera="0.5" camera_numb="3" reshh = "480" resww = "752"/> -->
+    <xacro:zed_camera base_name="base_link" pos_x="-0.15" pos_y="0.0" pos_z="0.2" rotate_camera="1.0" camera_numb="4" reshh = "480" resww = "752"/>
   </xacro:if>
 
   <gazebo>
