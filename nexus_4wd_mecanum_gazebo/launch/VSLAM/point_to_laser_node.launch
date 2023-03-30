@@ -2,7 +2,7 @@
 
 <launch>
 
-    <arg name="app_name"                     default="vio_slam"/>
+    <arg name="app_name"                     default="DC_VSLAM"/>
     <arg name="target_frame"                    default="camera_center_1"/>
     <arg name="min_height"                      default="-0.15"/>
     <arg name="max_height"                      default="0.01"/>
